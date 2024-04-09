@@ -1,14 +1,14 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.netology.service.MonthsService;
+import ru.netology.stats.StatsService;
 
-public class MonthsServiceTest {
+public class StatsServiceTest {
 
     @Test
 
     public void AllSalesSum() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedsum = 180;
@@ -21,7 +21,7 @@ public class MonthsServiceTest {
 
     public void averageSum() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAvSum = 15;
@@ -34,7 +34,7 @@ public class MonthsServiceTest {
 
     public void minSales() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMin = 9;
@@ -48,7 +48,7 @@ public class MonthsServiceTest {
 
     public void maxSales() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMin = 8;
@@ -61,7 +61,7 @@ public class MonthsServiceTest {
     @Test
     public void maxSalesMonths() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMaxMonths = 5;
@@ -74,7 +74,7 @@ public class MonthsServiceTest {
     @Test
     public void MinSalesMonths() {
 
-        MonthsService service = new MonthsService();
+        StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMaxMonths = 5;
