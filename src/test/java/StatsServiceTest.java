@@ -6,13 +6,13 @@ public class StatsServiceTest {
 
     @Test
 
-    public void AllSalesSum() {
+    public void allSalesSum() {
 
         StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedsum = 180;
-        int actualsum = service.AllSalesSum(Months);
+        int actualsum = service.allSalesSum(Months);
 
         Assertions.assertEquals(expectedsum, actualsum);
     }
@@ -72,14 +72,14 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void MinSalesMonths() {
+    public void minSalesMonths() {
 
         StatsService service = new StatsService();
         int[] Months = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMaxMonths = 5;
 
-        int actualMin = service.MinSalesMonths(Months);
+        int actualMin = service.minSalesMonths(Months);
 
         Assertions.assertEquals(expectedMaxMonths, actualMin);
     }
