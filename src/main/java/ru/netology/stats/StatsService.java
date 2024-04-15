@@ -1,32 +1,32 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int allSalesSum(int[] Months) {
-        int sum = 0;
-        for (int i = 0; i < Months.length; i++) {
-            sum = sum + Months[i];
+    public long allSalesSum(long[] months) {
+        long sum = 0;
+        for (int i = 0; i < months.length; i++) {
+            sum = sum + months[i];
         }
 
 
         return sum;
     }
 
-    public int averageSum(int[] Months) {
-        int Sum = 0;
-        int avSum = 0;
-        for (int i = 0; i < Months.length; i++) {
-            Sum = Sum + Months[i];
+    public long averageSum(long[] months) {
+        long Sum = 0;
+        long avSum = 0;
+        for (int i = 0; i < months.length; i++) {
+            Sum = Sum + months[i];
             avSum = Sum / 12;
         }
 
         return avSum;
     }
 
-    public int minSales(int[] Months) {
+    public long minSales(long [] months) {
         int minMonth = 0;
 
-        for (int i = 0; i < Months.length; i++) {
-            if (Months[i] <= Months[minMonth]) {
+        for (int i = 0; i < months.length; i++) {
+            if (months[i] <= months[minMonth]) {
                 minMonth = i;
             }
         }
@@ -34,11 +34,11 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int maxSales(int[] Months) {
+    public long maxSales(long [] months) {
         int maxMonth = 0;
 
-        for (int i = 0; i < Months.length; i++) {
-            if (Months[i] >= Months[maxMonth]) {
+        for (int i = 0; i < months.length; i++) {
+            if (months[i] >= months[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -46,14 +46,13 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int maxSalesMonths(int[] Months) {
-        int maxMonths = 0;
-        ;
-        int avSum = 15;
+    public long maxSalesMonths(long[] months) {
+        long maxMonths = 0;
+        long avSum = averageSum(months);
 
-        for (int i = 0; i < Months.length; i++) {
+        for (int i = 0; i < months.length; i++) {
 
-            if (Months[i] > avSum) {
+            if (months[i] > avSum) {
                 maxMonths++;
             }
         }
@@ -61,14 +60,13 @@ public class StatsService {
         return maxMonths;
     }
 
-    public int minSalesMonths(int[] Months) {
-        int minMonths = 0;
-        ;
-        int avSum = 15;
+    public long minSalesMonths(long[] months) {
+        long minMonths = 0;
+        long avSum = averageSum(months) ;
 
-        for (int i = 0; i < Months.length; i++) {
+        for (int i = 0; i < months.length; i++) {
 
-            if (Months[i] < avSum) {
+            if (months[i] < avSum) {
                 minMonths++;
             }
         }
