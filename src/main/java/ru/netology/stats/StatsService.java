@@ -22,7 +22,7 @@ public class StatsService {
         return avSum;
     }
 
-    public long minSales(long [] months) {
+    public int minSales(long [] months) {
         int minMonth = 0;
 
         for (int i = 0; i < months.length; i++) {
@@ -34,7 +34,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public long maxSales(long [] months) {
+    public int maxSales(long [] months) {
         int maxMonth = 0;
 
         for (int i = 0; i < months.length; i++) {
